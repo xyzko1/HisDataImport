@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HisModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="cb_digital_news">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="PaperID" Type="int" Nullable="false" />
+    <Property Name="IssueID" Type="nvarchar" MaxLength="50" />
+    <Property Name="PageID" Type="int" Nullable="false" />
+    <Property Name="PrimersTitle" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Title" Type="nvarchar" MaxLength="1000" />
+    <Property Name="SubTitle" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Author" Type="nvarchar" MaxLength="500" />
+    <Property Name="Source" Type="nvarchar" MaxLength="500" />
+    <Property Name="Coordinate" Type="nvarchar(max)" />
+    <Property Name="Content" Type="nvarchar(max)" />
+    <Property Name="HtmlContent" Type="nvarchar(max)" />
+    <Property Name="TransferFlag" Type="int" />
+    <Property Name="PageSNO" Type="nvarchar" MaxLength="50" />
+    <Property Name="Flag" Type="int" />
+    <Property Name="font" Type="int" />
+    <Property Name="catalog" Type="nvarchar" MaxLength="200" />
+    <Property Name="ArticleName" Type="nvarchar" MaxLength="1000" />
+    <Property Name="ArticleNO" Type="nvarchar" MaxLength="50" />
+    <Property Name="PageCount" Type="nvarchar" MaxLength="100" />
+    <Property Name="PageSort" Type="nvarchar" MaxLength="100" />
+    <Property Name="ArticleSort" Type="nvarchar" MaxLength="100" />
+    <Property Name="Editor" Type="nvarchar" MaxLength="500" />
+    <Property Name="PageIndex" Type="nvarchar" MaxLength="100" />
+    <Property Name="PageColumn" Type="nvarchar" MaxLength="500" />
+    <Property Name="ImageName" Type="nvarchar" MaxLength="500" />
+    <Property Name="ImageWaterMark" Type="nvarchar" MaxLength="500" />
+    <Property Name="ImageMark" Type="nvarchar" MaxLength="500" />
+    <Property Name="ReprintTag" Type="nvarchar" MaxLength="500" />
+    <Property Name="ImageFilePath" Type="nvarchar" MaxLength="500" />
+    <Property Name="PublishDate" Type="datetime2" Precision="7" />
+    <Property Name="fromWhere" Type="nvarchar" MaxLength="500" />
+    <Property Name="PageName" Type="nvarchar" MaxLength="1000" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PageStyle" Type="nvarchar" MaxLength="500" />
+    <Property Name="ArticleType" Type="nvarchar" MaxLength="500" />
+    <Property Name="Abstract" Type="nvarchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="cb_digital_page">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="PaperID" Type="int" Nullable="false" />
+    <Property Name="PaperIssueID" Type="int" Nullable="false" />
+    <Property Name="PageName" Type="nvarchar" MaxLength="50" />
+    <Property Name="PageSort" Type="nvarchar" MaxLength="50" />
+    <Property Name="PageSNO" Type="nvarchar" MaxLength="50" />
+    <Property Name="PageImagePath" Type="nvarchar" MaxLength="100" />
+    <Property Name="PageImageName" Type="nvarchar" MaxLength="50" />
+    <Property Name="fromWhere" Type="nvarchar" MaxLength="50" />
+    <Property Name="Flag" Type="int" />
+    <Property Name="font" Type="int" />
+    <Property Name="Date" Type="datetime2" Precision="7" />
+    <Property Name="Editor" Type="nvarchar" MaxLength="100" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PageStyle" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="cb_digital_paper">
+    <Key>
+      <PropertyRef Name="PaperId" />
+    </Key>
+    <Property Name="PaperName" Type="nvarchar" MaxLength="200" />
+    <Property Name="PaperId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="HisModelStoreContainer">
+    <EntitySet Name="cb_digital_news" EntityType="Self.cb_digital_news" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="cb_digital_page" EntityType="Self.cb_digital_page" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="cb_digital_paper" EntityType="Self.cb_digital_paper" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

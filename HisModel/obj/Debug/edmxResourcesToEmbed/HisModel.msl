@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="HisModelStoreContainer" CdmEntityContainer="DLEntities">
+    <EntitySetMapping Name="cb_digital_news">
+      <EntityTypeMapping TypeName="HisModel.cb_digital_news">
+        <MappingFragment StoreEntitySet="cb_digital_news">
+          <ScalarProperty Name="PaperID" ColumnName="PaperID" />
+          <ScalarProperty Name="IssueID" ColumnName="IssueID" />
+          <ScalarProperty Name="PageID" ColumnName="PageID" />
+          <ScalarProperty Name="PrimersTitle" ColumnName="PrimersTitle" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="SubTitle" ColumnName="SubTitle" />
+          <ScalarProperty Name="Author" ColumnName="Author" />
+          <ScalarProperty Name="Source" ColumnName="Source" />
+          <ScalarProperty Name="Coordinate" ColumnName="Coordinate" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="HtmlContent" ColumnName="HtmlContent" />
+          <ScalarProperty Name="TransferFlag" ColumnName="TransferFlag" />
+          <ScalarProperty Name="PageSNO" ColumnName="PageSNO" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="font" ColumnName="font" />
+          <ScalarProperty Name="catalog" ColumnName="catalog" />
+          <ScalarProperty Name="ArticleName" ColumnName="ArticleName" />
+          <ScalarProperty Name="ArticleNO" ColumnName="ArticleNO" />
+          <ScalarProperty Name="PageCount" ColumnName="PageCount" />
+          <ScalarProperty Name="PageSort" ColumnName="PageSort" />
+          <ScalarProperty Name="ArticleSort" ColumnName="ArticleSort" />
+          <ScalarProperty Name="Editor" ColumnName="Editor" />
+          <ScalarProperty Name="PageIndex" ColumnName="PageIndex" />
+          <ScalarProperty Name="PageColumn" ColumnName="PageColumn" />
+          <ScalarProperty Name="ImageName" ColumnName="ImageName" />
+          <ScalarProperty Name="ImageWaterMark" ColumnName="ImageWaterMark" />
+          <ScalarProperty Name="ImageMark" ColumnName="ImageMark" />
+          <ScalarProperty Name="ReprintTag" ColumnName="ReprintTag" />
+          <ScalarProperty Name="ImageFilePath" ColumnName="ImageFilePath" />
+          <ScalarProperty Name="PublishDate" ColumnName="PublishDate" />
+          <ScalarProperty Name="fromWhere" ColumnName="fromWhere" />
+          <ScalarProperty Name="PageName" ColumnName="PageName" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="PageStyle" ColumnName="PageStyle" />
+          <ScalarProperty Name="ArticleType" ColumnName="ArticleType" />
+          <ScalarProperty Name="Abstract" ColumnName="Abstract" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cb_digital_page">
+      <EntityTypeMapping TypeName="HisModel.cb_digital_page">
+        <MappingFragment StoreEntitySet="cb_digital_page">
+          <ScalarProperty Name="PaperID" ColumnName="PaperID" />
+          <ScalarProperty Name="PaperIssueID" ColumnName="PaperIssueID" />
+          <ScalarProperty Name="PageName" ColumnName="PageName" />
+          <ScalarProperty Name="PageSort" ColumnName="PageSort" />
+          <ScalarProperty Name="PageSNO" ColumnName="PageSNO" />
+          <ScalarProperty Name="PageImagePath" ColumnName="PageImagePath" />
+          <ScalarProperty Name="PageImageName" ColumnName="PageImageName" />
+          <ScalarProperty Name="fromWhere" ColumnName="fromWhere" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="font" ColumnName="font" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Editor" ColumnName="Editor" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="PageStyle" ColumnName="PageStyle" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cb_digital_paper">
+      <EntityTypeMapping TypeName="HisModel.cb_digital_paper">
+        <MappingFragment StoreEntitySet="cb_digital_paper">
+          <ScalarProperty Name="PaperName" ColumnName="PaperName" />
+          <ScalarProperty Name="PaperId" ColumnName="PaperId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

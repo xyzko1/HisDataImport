@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HisModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="cb_digital_news">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="PaperID" Type="Int32" Nullable="false" />
+    <Property Name="IssueID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PageID" Type="Int32" Nullable="false" />
+    <Property Name="PrimersTitle" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Title" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="SubTitle" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Author" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Source" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Coordinate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="HtmlContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TransferFlag" Type="Int32" />
+    <Property Name="PageSNO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Flag" Type="Int32" />
+    <Property Name="font" Type="Int32" />
+    <Property Name="catalog" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="ArticleName" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="ArticleNO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PageCount" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PageSort" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ArticleSort" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Editor" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="PageIndex" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PageColumn" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ImageName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ImageWaterMark" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ImageMark" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ReprintTag" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ImageFilePath" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="PublishDate" Type="DateTime" Precision="7" />
+    <Property Name="fromWhere" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="PageName" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PageStyle" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ArticleType" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Abstract" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="cb_digital_page">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="PaperID" Type="Int32" Nullable="false" />
+    <Property Name="PaperIssueID" Type="Int32" Nullable="false" />
+    <Property Name="PageName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PageSort" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PageSNO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PageImagePath" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PageImageName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fromWhere" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Flag" Type="Int32" />
+    <Property Name="font" Type="Int32" />
+    <Property Name="Date" Type="DateTime" Precision="7" />
+    <Property Name="Editor" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PageStyle" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="cb_digital_paper">
+    <Key>
+      <PropertyRef Name="PaperId" />
+    </Key>
+    <Property Name="PaperName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="PaperId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityContainer Name="DLEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="cb_digital_news" EntityType="Self.cb_digital_news" />
+    <EntitySet Name="cb_digital_page" EntityType="Self.cb_digital_page" />
+    <EntitySet Name="cb_digital_paper" EntityType="Self.cb_digital_paper" />
+  </EntityContainer>
+</Schema>

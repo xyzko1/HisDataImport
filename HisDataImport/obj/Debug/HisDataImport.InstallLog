@@ -1,0 +1,29 @@
+﻿正在安装程序集“D:\VSWorkSpace\HisDataImport\HisDataImport\obj\Debug\HisDataImport.exe”。
+受影响的参数是:
+   logtoconsole = 
+   logfile = D:\VSWorkSpace\HisDataImport\HisDataImport\obj\Debug\HisDataImport.InstallLog
+   assemblypath = D:\VSWorkSpace\HisDataImport\HisDataImport\obj\Debug\HisDataImport.exe
+正在安装服务 HisDataImport...
+已成功安装服务 HisDataImport。
+正在日志 Application 中创建 EventLog 源 HisDataImport...
+正在提交程序集“D:\VSWorkSpace\HisDataImport\HisDataImport\obj\Debug\HisDataImport.exe”。
+受影响的参数是:
+   logtoconsole = 
+   logfile = D:\VSWorkSpace\HisDataImport\HisDataImport\obj\Debug\HisDataImport.InstallLog
+   assemblypath = D:\VSWorkSpace\HisDataImport\HisDataImport\obj\Debug\HisDataImport.exe
+正在安装程序集“D:\VSWorkSpace\HisDataImport\HisDataImport\obj\Debug\HisDataImport.exe”。
+受影响的参数是:
+   logtoconsole = 
+   logfile = D:\VSWorkSpace\HisDataImport\HisDataImport\obj\Debug\HisDataImport.InstallLog
+   assemblypath = D:\VSWorkSpace\HisDataImport\HisDataImport\obj\Debug\HisDataImport.exe
+尝试在 D:\VSWorkSpace\HisDataImport\HisDataImport\obj\Debug\HisDataImport.exe 程序集中查找安装程序时发生异常。
+System.Reflection.ReflectionTypeLoadException: 无法加载一个或多个请求的类型。有关更多信息，请检索 LoaderExceptions 属性。
+正在中止安装 D:\VSWorkSpace\HisDataImport\HisDataImport\obj\Debug\HisDataImport.exe。
+正在回滚程序集“D:\VSWorkSpace\HisDataImport\HisDataImport\obj\Debug\HisDataImport.exe”。
+受影响的参数是:
+   logtoconsole = 
+   logfile = D:\VSWorkSpace\HisDataImport\HisDataImport\obj\Debug\HisDataImport.InstallLog
+   assemblypath = D:\VSWorkSpace\HisDataImport\HisDataImport\obj\Debug\HisDataImport.exe
+尝试在 D:\VSWorkSpace\HisDataImport\HisDataImport\obj\Debug\HisDataImport.exe 程序集中查找安装程序时发生异常。
+System.Reflection.ReflectionTypeLoadException: 无法加载一个或多个请求的类型。有关更多信息，请检索 LoaderExceptions 属性。
+正在中止安装 D:\VSWorkSpace\HisDataImport\HisDataImport\obj\Debug\HisDataImport.exe。

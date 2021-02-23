@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="HisModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="cb_digital_news">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="PaperID" Type="int" Nullable="false" />
+          <Property Name="IssueID" Type="nvarchar" MaxLength="50" />
+          <Property Name="PageID" Type="int" Nullable="false" />
+          <Property Name="PrimersTitle" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Title" Type="nvarchar" MaxLength="1000" />
+          <Property Name="SubTitle" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Author" Type="nvarchar" MaxLength="500" />
+          <Property Name="Source" Type="nvarchar" MaxLength="500" />
+          <Property Name="Coordinate" Type="nvarchar(max)" />
+          <Property Name="Content" Type="nvarchar(max)" />
+          <Property Name="HtmlContent" Type="nvarchar(max)" />
+          <Property Name="TransferFlag" Type="int" />
+          <Property Name="PageSNO" Type="nvarchar" MaxLength="50" />
+          <Property Name="Flag" Type="int" />
+          <Property Name="font" Type="int" />
+          <Property Name="catalog" Type="nvarchar" MaxLength="200" />
+          <Property Name="ArticleName" Type="nvarchar" MaxLength="1000" />
+          <Property Name="ArticleNO" Type="nvarchar" MaxLength="50" />
+          <Property Name="PageCount" Type="nvarchar" MaxLength="100" />
+          <Property Name="PageSort" Type="nvarchar" MaxLength="100" />
+          <Property Name="ArticleSort" Type="nvarchar" MaxLength="100" />
+          <Property Name="Editor" Type="nvarchar" MaxLength="500" />
+          <Property Name="PageIndex" Type="nvarchar" MaxLength="100" />
+          <Property Name="PageColumn" Type="nvarchar" MaxLength="500" />
+          <Property Name="ImageName" Type="nvarchar" MaxLength="500" />
+          <Property Name="ImageWaterMark" Type="nvarchar" MaxLength="500" />
+          <Property Name="ImageMark" Type="nvarchar" MaxLength="500" />
+          <Property Name="ReprintTag" Type="nvarchar" MaxLength="500" />
+          <Property Name="ImageFilePath" Type="nvarchar" MaxLength="500" />
+          <Property Name="PublishDate" Type="datetime2" Precision="7" />
+          <Property Name="fromWhere" Type="nvarchar" MaxLength="500" />
+          <Property Name="PageName" Type="nvarchar" MaxLength="1000" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PageStyle" Type="nvarchar" MaxLength="500" />
+          <Property Name="ArticleType" Type="nvarchar" MaxLength="500" />
+          <Property Name="Abstract" Type="nvarchar" MaxLength="1000" />
+        </EntityType>
+        <EntityType Name="cb_digital_page">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="PaperID" Type="int" Nullable="false" />
+          <Property Name="PaperIssueID" Type="int" Nullable="false" />
+          <Property Name="PageName" Type="nvarchar" MaxLength="50" />
+          <Property Name="PageSort" Type="nvarchar" MaxLength="50" />
+          <Property Name="PageSNO" Type="nvarchar" MaxLength="50" />
+          <Property Name="PageImagePath" Type="nvarchar" MaxLength="100" />
+          <Property Name="PageImageName" Type="nvarchar" MaxLength="50" />
+          <Property Name="fromWhere" Type="nvarchar" MaxLength="50" />
+          <Property Name="Flag" Type="int" />
+          <Property Name="font" Type="int" />
+          <Property Name="Date" Type="datetime2" Precision="7" />
+          <Property Name="Editor" Type="nvarchar" MaxLength="100" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PageStyle" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="cb_digital_paper">
+          <Key>
+            <PropertyRef Name="PaperId" />
+          </Key>
+          <Property Name="PaperName" Type="nvarchar" MaxLength="200" />
+          <Property Name="PaperId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="HisModelStoreContainer">
+          <EntitySet Name="cb_digital_news" EntityType="Self.cb_digital_news" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="cb_digital_page" EntityType="Self.cb_digital_page" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="cb_digital_paper" EntityType="Self.cb_digital_paper" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="HisModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="cb_digital_news">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="PaperID" Type="Int32" Nullable="false" />
+          <Property Name="IssueID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PageID" Type="Int32" Nullable="false" />
+          <Property Name="PrimersTitle" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="Title" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="SubTitle" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="Author" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Source" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Coordinate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="HtmlContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TransferFlag" Type="Int32" />
+          <Property Name="PageSNO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Flag" Type="Int32" />
+          <Property Name="font" Type="Int32" />
+          <Property Name="catalog" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="ArticleName" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="ArticleNO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PageCount" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PageSort" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ArticleSort" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Editor" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="PageIndex" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PageColumn" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ImageName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ImageWaterMark" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ImageMark" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ReprintTag" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ImageFilePath" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="PublishDate" Type="DateTime" Precision="7" />
+          <Property Name="fromWhere" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="PageName" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PageStyle" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ArticleType" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Abstract" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="cb_digital_page">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="PaperID" Type="Int32" Nullable="false" />
+          <Property Name="PaperIssueID" Type="Int32" Nullable="false" />
+          <Property Name="PageName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PageSort" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PageSNO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PageImagePath" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PageImageName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="fromWhere" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Flag" Type="Int32" />
+          <Property Name="font" Type="Int32" />
+          <Property Name="Date" Type="DateTime" Precision="7" />
+          <Property Name="Editor" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PageStyle" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="cb_digital_paper">
+          <Key>
+            <PropertyRef Name="PaperId" />
+          </Key>
+          <Property Name="PaperName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="PaperId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityContainer Name="DLEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="cb_digital_news" EntityType="Self.cb_digital_news" />
+          <EntitySet Name="cb_digital_page" EntityType="Self.cb_digital_page" />
+          <EntitySet Name="cb_digital_paper" EntityType="Self.cb_digital_paper" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="HisModelStoreContainer" CdmEntityContainer="DLEntities">
+          <EntitySetMapping Name="cb_digital_news">
+            <EntityTypeMapping TypeName="HisModel.cb_digital_news">
+              <MappingFragment StoreEntitySet="cb_digital_news">
+                <ScalarProperty Name="PaperID" ColumnName="PaperID" />
+                <ScalarProperty Name="IssueID" ColumnName="IssueID" />
+                <ScalarProperty Name="PageID" ColumnName="PageID" />
+                <ScalarProperty Name="PrimersTitle" ColumnName="PrimersTitle" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="SubTitle" ColumnName="SubTitle" />
+                <ScalarProperty Name="Author" ColumnName="Author" />
+                <ScalarProperty Name="Source" ColumnName="Source" />
+                <ScalarProperty Name="Coordinate" ColumnName="Coordinate" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="HtmlContent" ColumnName="HtmlContent" />
+                <ScalarProperty Name="TransferFlag" ColumnName="TransferFlag" />
+                <ScalarProperty Name="PageSNO" ColumnName="PageSNO" />
+                <ScalarProperty Name="Flag" ColumnName="Flag" />
+                <ScalarProperty Name="font" ColumnName="font" />
+                <ScalarProperty Name="catalog" ColumnName="catalog" />
+                <ScalarProperty Name="ArticleName" ColumnName="ArticleName" />
+                <ScalarProperty Name="ArticleNO" ColumnName="ArticleNO" />
+                <ScalarProperty Name="PageCount" ColumnName="PageCount" />
+                <ScalarProperty Name="PageSort" ColumnName="PageSort" />
+                <ScalarProperty Name="ArticleSort" ColumnName="ArticleSort" />
+                <ScalarProperty Name="Editor" ColumnName="Editor" />
+                <ScalarProperty Name="PageIndex" ColumnName="PageIndex" />
+                <ScalarProperty Name="PageColumn" ColumnName="PageColumn" />
+                <ScalarProperty Name="ImageName" ColumnName="ImageName" />
+                <ScalarProperty Name="ImageWaterMark" ColumnName="ImageWaterMark" />
+                <ScalarProperty Name="ImageMark" ColumnName="ImageMark" />
+                <ScalarProperty Name="ReprintTag" ColumnName="ReprintTag" />
+                <ScalarProperty Name="ImageFilePath" ColumnName="ImageFilePath" />
+                <ScalarProperty Name="PublishDate" ColumnName="PublishDate" />
+                <ScalarProperty Name="fromWhere" ColumnName="fromWhere" />
+                <ScalarProperty Name="PageName" ColumnName="PageName" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="PageStyle" ColumnName="PageStyle" />
+                <ScalarProperty Name="ArticleType" ColumnName="ArticleType" />
+                <ScalarProperty Name="Abstract" ColumnName="Abstract" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="cb_digital_page">
+            <EntityTypeMapping TypeName="HisModel.cb_digital_page">
+              <MappingFragment StoreEntitySet="cb_digital_page">
+                <ScalarProperty Name="PaperID" ColumnName="PaperID" />
+                <ScalarProperty Name="PaperIssueID" ColumnName="PaperIssueID" />
+                <ScalarProperty Name="PageName" ColumnName="PageName" />
+                <ScalarProperty Name="PageSort" ColumnName="PageSort" />
+                <ScalarProperty Name="PageSNO" ColumnName="PageSNO" />
+                <ScalarProperty Name="PageImagePath" ColumnName="PageImagePath" />
+                <ScalarProperty Name="PageImageName" ColumnName="PageImageName" />
+                <ScalarProperty Name="fromWhere" ColumnName="fromWhere" />
+                <ScalarProperty Name="Flag" ColumnName="Flag" />
+                <ScalarProperty Name="font" ColumnName="font" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Editor" ColumnName="Editor" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="PageStyle" ColumnName="PageStyle" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="cb_digital_paper">
+            <EntityTypeMapping TypeName="HisModel.cb_digital_paper">
+              <MappingFragment StoreEntitySet="cb_digital_paper">
+                <ScalarProperty Name="PaperName" ColumnName="PaperName" />
+                <ScalarProperty Name="PaperId" ColumnName="PaperId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
